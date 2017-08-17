@@ -1,0 +1,27 @@
+{
+  "name": "mystery-word",
+  "version": "1.0.0",
+  "description": "Weekly Project for Week 5",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/grantmcgrath/weekly-project-week-05.git"
+  },
+  "author": "Grant McGrath",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/grantmcgrath/weekly-project-week-05/issues"
+  },
+  "homepage": "https://github.com/grantmcgrath/weekly-project-week-05#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.15.5",
+    "express-validator": "^3.2.1",
+    "fs": "0.0.1-security"
+  }
+}
