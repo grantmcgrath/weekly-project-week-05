@@ -17,35 +17,44 @@
   </header>
 
   <section id="word">
-    {{#word}}
+    {{#wordGuess}}
       {{.}}
-    {{/word}}
+    {{/wordGuess}}
   </section>
 
   <section id="input">
-    <form class="" action="" method="post">
-      <input type="text" name="" placeholder="Enter guess here">
-      <button type="button" name="searchButton">Make a guess</button>
-    </form>
+    {{#if guesses}}
+      <form class="guess" action="/guess" method="post">
+        <input type="text" name="letter" placeholder="Enter guess here" autofocus>
+        <button id="guessButton">Make a guess</button>
+      </form>
+      <!-- If player runs our of guesses. -->
+    {{else}}
+      <p id="loser">You Loose!!!</p>
+      <form class="reset" action="/reset" method="post">
+        <button>Try again</button>
+      </form>
+    {{/if}}
   </section>
 
-  <section>
+  <section id="error">
     {{error}}
   </section>
 
   <section id="lettersGuessed">
     <p>Letters guessed:
       {{#if wrongLetters}}
-        {{.}}
+        {{#wrongLetters}}
+          {{.}}
+        {{/wrongLetters}}
       {{else}}
         None
       {{/if}}
+
     </p>
   </section>
 
 
 </body>
-
-</script>
 
 </html>

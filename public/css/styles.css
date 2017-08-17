@@ -26,10 +26,17 @@ input {
   border: 4px solid black;
 }
 
+input:focus {
+  outline: none;
+}
+
 button {
   font-size: 20px;
   padding: 12px 15px;
-  margin-left: 20px;
+}
+
+button:focus {
+  outline: none;
 }
 
 #guessesRemaining {
@@ -38,6 +45,7 @@ button {
 
 #word {
   text-align: center;
+  font-size: 50px;
 }
 
 #input {
@@ -50,8 +58,23 @@ button {
   width: 400px;
 }
 
+#error {
+  width: 400px;
+}
+
 .headerSpace {
   display: flex;
   justify-content: space-between;
   margin-top: 30px;
+}
+
+#loser {
+  color: red;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.guessButton {
+  padding: 12px 15px;
+  
 }
